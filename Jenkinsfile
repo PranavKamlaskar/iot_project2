@@ -20,6 +20,7 @@ pipeline {
                     
                     python3 -m venv venv
 		    chmod -R 755 venv
+		    chmod -R +x venv/bin/
                     ./venv/bin/pip install --upgrade pip
                 '''
             }
