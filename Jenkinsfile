@@ -13,18 +13,6 @@ pipeline {
             }
         }
 
-        stage('Setup Virtual Environment') {
-            steps {
-                echo 'Creating virtual environment...'
-                sh '''
-                    
-                    python3 -m venv venv
-		    chmod -R 755 venv
-		    chmod -R +x venv/bin/*
-                    ./venv/bin/pip install --upgrade pip
-                '''
-            }
-        }
 
         stage('Install Dependencies') {
             steps {
